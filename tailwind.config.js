@@ -12,7 +12,6 @@ module.exports = {
         'elixir': {
           DEFAULT: '#270640',
         },
-        'orange': '#ff7849',
       },
       container: {
         center: true,

@@ -5,18 +5,52 @@
 /* Your custom styles go here */
 
 a {
-  @apply text-orange;
+  @apply text-orange-400;
 }
 
 body {
   @apply text-white;
 }
 
-.post {
+article.post {
   img {
     @apply w-full sm:w-[400px] h-auto rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-in-out;
     @apply hover:shadow-xl hover:scale-105 hover:rotate-1;
     @apply filter hover:brightness-110;
-    @apply text-center mt-2 mb-2;
+    @apply text-center mt-3 mb-3;
+  }
+
+  header.post-header {
+    @apply text-center mb-2;
+
+    h1 {
+      @apply text-white font-bold text-3xl;
+    }
+
+    p {
+      @apply text-center text-white font-semibold;
+
+      iframe {
+        @apply text-center;
+      }
+    }
+  }
+
+  div.post-content {
+    ul {
+      @apply mb-4 !important;
+    }
+
+    h3 {
+      @apply text-[#ceb6db] text-xl;
+    }
+  }
+
+  h2 {
+    @apply text-white text-white font-bold text-2xl mt-2;
+  }
+
+  p {
+    @apply text-justify;
   }
 }
