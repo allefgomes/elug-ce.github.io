@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="home pt-4 container">
+  <h1 class="text-center text-4xl text-white font-bold">ElugCE</h1>
+
+  <div class="text-center pb-4">
+    {{ content }}
+  </div>
+
+  <div class="posts-list">
+    <div class="grid grid-cols-3 grid-rows-5 gap-3">
+      {% for post in site.posts %}
+      <div class="">
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="text-center pt-4">
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  </div>
+</div>
